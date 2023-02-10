@@ -1,11 +1,10 @@
-import flask
-# database related variables
+from flask import Flask
+app = Flask(__name__)
 
-app = flask.Flask(__name__)
 
-@app.route("/home")
-def home():
-    return "Connection to MySQL failed"
+@app.route("/")
+def hello():
+    return "Hello, SmartNinja!"
 
 if __name__ == "__main__":
     app.run()
